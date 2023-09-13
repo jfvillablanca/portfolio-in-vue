@@ -2,41 +2,40 @@
   <div :data-theme="theme">
     <div class="navbar fixed bg-base-100 z-40 shadow-sm">
       <div class="navbar-start">
-        <a class="btn btn-ghost md:text-xl">Nuxtwind Daisy</a>
+        <a class="btn btn-ghost md:text-xl">Jann Marc's Website</a>
       </div>
-      <div class="navbar-center hidden lg:flex">
-        <!-- TODO: You can add menu here -->
-      </div>
-      <div class="navbar-end">
-        <select v-model="theme" class="select select-primary md:w-full md:max-w-xs">
-          <option disabled selected>Select Theme</option>
-          <option v-for="theme in themes" :value="theme" :key="theme">
-            <span class="uppercase">{{ theme }}</span>
-          </option>
-        </select>
+      <div class="navbar-end hidden lg:flex">
+        <div class="">
+          <a class="btn btn-ghost md:text-lg">About</a>
+        </div>
+        <div class="">
+          <a class="btn btn-ghost md:text-lg">Projects</a>
+        </div>
+        <div class="">
+          <a class="btn btn-ghost md:text-lg">Contact</a>
+        </div>
       </div>
     </div>
     <slot />
     <footer class="footer footer-center p-10 bg-base-50">
       <div>
-        <h1 class="text-2xl md:text-3xl font-bold">Nuxtwind Daisy</h1>
-        <p class="md:font-bold">
-          Create beautiful and fast websites without the tedious setup
-        </p>
-        <p>Copyright © {{new Date().getFullYear()}} - All right reserved</p>
-      </div>
-      <div>
         <div class="grid grid-flow-col gap-4">
-          <a href="https://twitter.com/jrtiquez" target="_blank">
-            <i class="lab la-twitter text-4xl"></i>
+          <a
+            href="https://www.linkedin.com/in/jmfv"
+            target="_blank"
+          >
+            <i class="lab la-linkedin text-4xl" />
           </a>
-          <a href="https://github.com/ossphilippines/nuxtwind-daisy" target="_blank">
-            <i class="lab la-github text-4xl"></i>
-          </a>
-          <a href="https://facebook.com/ossph.org" target="_blank">
-            <i class="lab la-facebook text-4xl"></i>
+          <a
+            href="https://github.com/jfvillablanca/portfolio-in-vue"
+            target="_blank"
+          >
+            <i class="lab la-github text-4xl" />
           </a>
         </div>
+      </div>
+      <div>
+        <p>Copyright © {{ new Date().getFullYear() }} - All right reserved</p>
       </div>
     </footer>
   </div>
@@ -76,9 +75,9 @@ const THEMES = [
   'winter',
 ];
 export default {
-  setup () {
+  setup() {
     const theme = ref(null);
-    watch(theme, (value) => {
+    watch(theme, (value = 'synthwave') => {
       localStorage.setItem('daisyui-theme', value);
     });
     onMounted(() => {
