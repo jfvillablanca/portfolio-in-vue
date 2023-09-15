@@ -20,10 +20,7 @@
     <footer class="footer footer-center p-10 bg-base-50">
       <div>
         <div class="grid grid-flow-col gap-4">
-          <a
-            href="https://www.linkedin.com/in/jmfv"
-            target="_blank"
-          >
+          <a href="https://www.linkedin.com/in/jmfv" target="_blank">
             <i class="lab la-linkedin text-4xl" />
           </a>
           <a

@@ -60,7 +60,7 @@ export default defineNuxtConfig({
   },
 
   build: {
-    extend (config, ctx) {
+    extend(config, ctx) {
       config.resolve.symlinks = false;
     },
   },
