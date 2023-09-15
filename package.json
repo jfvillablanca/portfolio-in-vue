@@ -1,10 +1,9 @@
 {
-  "name": "nuxtwind-daisy",
+  "name": "portfolio-in-vue",
   "version": "1.0.0",
   "main": ".eslintrc.js",
-  "description": "Nuxtwind Daisy is a starter template for Nuxt.js 3 + Tailwind CSS + Daisy UI with additional installed setup for custom font, icons, animation, and more.",
-  "productName": "Nuxtwind Daisy 🟢💨🌼",
-  "author": "Joff Tiquez <jofftiquez@gmail.com>",
+  "description": "jmfv's portfolio website based on the starter template: Nuxtwind Daisy (Nuxt.js 3 + Tailwind CSS + Daisy UI).",
+  "author": "Jann Marc Villablanca <jmfv.dev@gmail.com>",
   "scripts": {
     "lint": "eslint --ext .js,.vue ./ --fix",
     "format": "prettier --config ./.prettierrc -w 'src/**/*.{js,vue}' && git update-index --again",
