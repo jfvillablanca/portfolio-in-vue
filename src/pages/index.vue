@@ -35,8 +35,8 @@
   </div>
 
   <generic-panel>
-    <div class="flex flex-col">
-      <h1 class="text-3xl md:text-5xl mb-5">Introduction</h1>
+    <div class="flex flex-col min-h-screen">
+      <h1 class="text-3xl md:text-5xl pb-5" id="about-panel">About</h1>
       <p class="md:text-lg">
         Create beautiful and fast websites without worrying about the tedious
         setup. Just fork this repository and start hacking away!
@@ -45,8 +45,6 @@
   </generic-panel>
 
   <generic-panel>
-    <div class="flex flex-col">
-      <h1 class="text-3xl md:text-5xl mb-5">Getting Started</h1>
       <p class="md:text-lg">
         Read
         <a
@@ -57,12 +55,14 @@
         </a>
         on how to start quickly.
       </p>
+    <div class="flex flex-col min-h-screen -scroll-mt-3">
+      <h1 class="text-3xl md:text-5xl pb-5" id="projects-panel">Projects</h1>
     </div>
   </generic-panel>
 
   <generic-panel>
-    <div class="flex flex-col">
-      <h1 class="text-3xl md:text-5xl mb-5">Features</h1>
+    <div class="flex flex-col min-h-screen">
+      <h1 class="text-3xl md:text-5xl pb-5" id="contact-panel">Contact</h1>
       <p class="md:text-lg">
         See what you can do below. Basically, every basic thing that you need is
         already included in this starter template project. From custom font,

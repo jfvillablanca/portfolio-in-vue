@@ -1,18 +1,30 @@
 <template>
   <div :data-theme="theme">
-    <div class="navbar fixed bg-base-100 z-40 shadow-sm">
+    <div class="navbar fixed bg-base-300 z-40 shadow-sm">
       <div class="navbar-start">
-        <a class="btn btn-ghost md:text-xl">Jann Marc's Website</a>
+        <a @click="backToTop()" class="btn btn-ghost md:text-xl">Home</a>
       </div>
-      <div class="navbar-end hidden lg:flex">
+      <div class="navbar-end lg:flex">
         <div class="">
-          <a class="btn btn-ghost md:text-lg">About</a>
+          <a
+            @click="scrollToSection('about-panel')"
+            class="btn btn-ghost md:text-lg"
+            >About</a
+          >
         </div>
         <div class="">
-          <a class="btn btn-ghost md:text-lg">Projects</a>
+          <a
+            @click="scrollToSection('projects-panel')"
+            class="btn btn-ghost md:text-lg"
+            >Projects</a
+          >
         </div>
         <div class="">
-          <a class="btn btn-ghost md:text-lg">Contact</a>
+          <a
+            @click="scrollToSection('contact-panel')"
+            class="btn btn-ghost md:text-lg"
+            >Contact</a
+          >
         </div>
       </div>
     </div>
@@ -84,6 +96,24 @@ export default {
       theme,
       themes: THEMES,
     };
+  },
+  methods: {
+    scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.scrollY - element.offsetHeight - 15;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    },
+    backToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    },
   },
 };
 </script>
