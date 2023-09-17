@@ -36,10 +36,25 @@
 
   <generic-panel>
     <div class="flex flex-col min-h-screen">
-      <h1 class="text-3xl md:text-5xl pb-5" id="about-panel">About</h1>
-      <p class="md:text-lg">
-        Create beautiful and fast websites without worrying about the tedious
-        setup. Just fork this repository and start hacking away!
+      <h1 id="about-panel" class="text-3xl md:text-5xl pb-5">About</h1>
+      <p class="mb-3 max-w-sm md:text-lg lg:max-w-md">
+        <span class="font-bold">The Perennial Learner: </span> I thrive on
+        tackling complex challenges, whether it's coding or jazz theory. A quick
+        study, I approach every endeavor with curiosity and a thirst for
+        knowledge.
+      </p>
+      <p class="mb-3 max-w-sm md:text-lg lg:max-w-md">
+        <span class="font-bold">From circuits to code: </span>Though my software
+        development journey is recent, my programming journey began early and
+        blossomed during my university days. With an electronics engineering
+        background, I've explored the rudiments of computing, from data
+        abstractions to physical circuitry.
+      </p>
+      <p class="mb-3 max-w-sm md:text-lg lg:max-w-md">
+        <span class="font-bold">Off-Duty Grooves: </span>When not immersed on a
+        new project or tinkering with Nix, you'll find me self-teaching guitar
+        and bass, diving into music theory, and transcribing jazz solos or
+        comping to bossa rhythms.
       </p>
     </div>
   </generic-panel>
