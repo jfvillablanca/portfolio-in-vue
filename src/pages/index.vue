@@ -71,13 +71,13 @@
         on how to start quickly.
       </p>
     <div class="flex flex-col min-h-screen -scroll-mt-3">
-      <h1 class="text-3xl md:text-5xl pb-5" id="projects-panel">Projects</h1>
+      <h1 id="projects-panel" class="text-3xl md:text-5xl pb-5">Projects</h1>
     </div>
   </generic-panel>
 
   <generic-panel>
     <div class="flex flex-col min-h-screen">
-      <h1 class="text-3xl md:text-5xl pb-5" id="contact-panel">Contact</h1>
+      <h1 id="contact-panel" class="text-3xl md:text-5xl pb-5">Contact</h1>
       <p class="md:text-lg">
         See what you can do below. Basically, every basic thing that you need is
         already included in this starter template project. From custom font,

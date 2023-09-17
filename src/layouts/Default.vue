@@ -2,27 +2,27 @@
   <div :data-theme="theme">
     <div class="navbar fixed bg-base-300 z-40 shadow-sm">
       <div class="navbar-start">
-        <a @click="backToTop()" class="btn btn-ghost md:text-xl">Home</a>
+        <a class="btn btn-ghost md:text-xl" @click="backToTop()">Home</a>
       </div>
       <div class="navbar-end lg:flex">
         <div class="">
           <a
-            @click="scrollToSection('about-panel')"
             class="btn btn-ghost md:text-lg"
+            @click="scrollToSection('about-panel')"
             >About</a
           >
         </div>
         <div class="">
           <a
-            @click="scrollToSection('projects-panel')"
             class="btn btn-ghost md:text-lg"
+            @click="scrollToSection('projects-panel')"
             >Projects</a
           >
         </div>
         <div class="">
           <a
-            @click="scrollToSection('contact-panel')"
             class="btn btn-ghost md:text-lg"
+            @click="scrollToSection('contact-panel')"
             >Contact</a
           >
         </div>
