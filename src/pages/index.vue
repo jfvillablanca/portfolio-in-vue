@@ -590,10 +590,10 @@
   </generic-panel>
 </template>
 
-<script>
+<script lang="ts">
 import { useHead } from '#app';
 import { definePageMeta } from '#imports';
-import GenericPanel from '~/components/commons/GenericPanel';
+import GenericPanel from '~/components/commons/GenericPanel.vue';
 import ogBanner from '../assets/images/nuxtwind-daisy-og-banner.jpg';
 
 export default {
@@ -607,8 +607,6 @@ export default {
 
     useHead({
       title: "jmfv's portfolio",
-      description:
-        'Nuxtwind Daisy is a starter template for Nuxt.js 3 + Tailwind CSS + Daisy UI with additional installed setup for custom font, icons, animation, and more.',
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
       meta: [
         {
