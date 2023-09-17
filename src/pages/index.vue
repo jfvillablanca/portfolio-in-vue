@@ -6,30 +6,7 @@
           Hello, I am Jann Marc!
         </h1>
         <p data-aos="fade-down" data-aos-delay="300" class="md:text-lg mb-6">
-          Nuxtwind Daisy is a starter template project for Nuxt.js 3 + Tailwind
-          CSS + Daisy UI with additional installed setup for custom font, icons,
-          animation, and more.
         </p>
-        <!-- <div class="flex justify-center space-x-5"> -->
-        <!--   <a -->
-        <!--     data-aos="fade-down" -->
-        <!--     data-aos-delay="600" -->
-        <!--     class="btn btn-sm md:btn-md btn-primary" -->
-        <!--     href="https://github.com/OSSPhilippines/nuxtwind-daisy/fork" -->
-        <!--     target="_blank" -->
-        <!--   > -->
-        <!--     Fork this Project -->
-        <!--   </a> -->
-        <!--   <a -->
-        <!--     data-aos="fade-down" -->
-        <!--     data-aos-delay="600" -->
-        <!--     class="btn btn-sm md:btn-md btn-primary btn-outline" -->
-        <!--     href="https://github.com/OSSPhilippines/nuxtwind-daisy" -->
-        <!--     target="_blank" -->
-        <!--   > -->
-        <!--     Give us a star in GitHub -->
-        <!--   </a> -->
-        <!-- </div> -->
       </div>
     </div>
   </div>
@@ -60,16 +37,6 @@
   </generic-panel>
 
   <generic-panel>
-      <p class="md:text-lg">
-        Read
-        <a
-          href="https://github.com/OSSPhilippines/nuxtwind-daisy#readme"
-          class="text-primary"
-        >
-          the documentation
-        </a>
-        on how to start quickly.
-      </p>
     <div class="flex flex-col min-h-screen -scroll-mt-3">
       <h1 id="projects-panel" class="text-3xl md:text-5xl pb-5">Projects</h1>
     </div>
@@ -79,9 +46,6 @@
     <div class="flex flex-col min-h-screen">
       <h1 id="contact-panel" class="text-3xl md:text-5xl pb-5">Contact</h1>
       <p class="md:text-lg">
-        See what you can do below. Basically, every basic thing that you need is
-        already included in this starter template project. From custom font,
-        icons, animations, and more.
       </p>
     </div>
   </generic-panel>
