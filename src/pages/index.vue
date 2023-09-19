@@ -39,6 +39,13 @@
   <generic-panel>
     <div class="flex flex-col min-h-screen -scroll-mt-3">
       <h1 id="projects-panel" class="text-3xl md:text-5xl pb-5">Projects</h1>
+      <ul class="flex flex-col place-items-center">
+        <ProjectCard
+          v-for="project in projects"
+          :key="project.name"
+          :project="project"
+        />
+      </ul>
     </div>
   </generic-panel>
 
@@ -52,13 +59,17 @@
 </template>
 
 <script lang="ts">
+import { Project } from '@/types';
 import { useHead } from '#app';
 import { definePageMeta } from '#imports';
-import GenericPanel from '~/components/commons/GenericPanel.vue';
+import GenericPanel from '@/components/commons/GenericPanel.vue';
+import quizzical1 from '../assets/project-screenshots/quizzical/quizzical-1.png';
+import ProjectCard from '@/components/commons/ProjectCard.vue';
 
 export default {
   components: {
     GenericPanel,
+    ProjectCard,
   },
   setup() {
     definePageMeta({
@@ -70,7 +81,33 @@ export default {
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     });
 
-    return {};
+    const projects: Project[] = [
+      {
+        name: 'Bourne Task App',
+        description:
+          'Full-stack task management app inspired by Trello, featuring a robust NestJS/Express CRUD API backend, complemented by a Vite/React frontend. The frontend application efficiently manages its state asynchronously using Tanstack Query and the backend authenticates users with the PassportJS middleware',
+        technologies: ['React'],
+        githubRepo: 'https://github.com/jfvillablanca/bourne-task-app',
+        images: [quizzical1],
+      },
+      {
+        name: 'Converz Real Time Chat App',
+        description:
+          "Real-time chat full-stack application, replicating Discord's chat room functionality, by implementing a monorepo full-stack solution. This involved using vanilla Express and the Socket.IO library to enable seamless and bidirectional real-time communication channels",
+        technologies: ['React'],
+        githubRepo: 'https://github.com/jfvillablanca/converz-rtc',
+        images: [quizzical1],
+      },
+      {
+        name: "Let's get quizzical",
+        description:
+          'A quiz app based on React that retrieves quiz items from the Open Trivia Database through Fetch API calls.',
+        technologies: ['React'],
+        githubRepo: 'https://github.com/jfvillablanca/lets-get-quizzical',
+        images: [quizzical1],
+      },
+    ];
+    return { projects };
   },
 };
 </script>
