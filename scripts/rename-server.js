@@ -6,6 +6,7 @@
  * Because sometimes you want to upload more than one Nuxt app to Firebase Functions.
  */
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const nodeFs = require('node:fs');
 const readFile = nodeFs.readFile;
 const writeFileSync = nodeFs.writeFileSync;
