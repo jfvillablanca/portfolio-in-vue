@@ -25,6 +25,8 @@
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@tailwindcss/container-queries": "^0.1.0",
     "@tailwindcss/forms": "^0.5.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
     "eslint": "^8.29.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.19.1",
@@ -36,7 +38,8 @@
     "nuxt-gtag": "^0.5.7",
     "nuxt-headlessui": "^1.1.1",
     "rimraf": "^3.0.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vue-eslint-parser": "^9.3.1"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.9",

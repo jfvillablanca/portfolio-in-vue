@@ -4,8 +4,9 @@ module.exports = {
   // Remove this if you have an higher level ESLint config file (it usually happens into a monorepos)
   root: true,
 
+  parser: 'vue-eslint-parser',
   parserOptions: {
-    parser: '@babel/eslint-parser',
+    parser: '@typescript-eslint/parser',
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module' // Allows for the use of imports
   },
@@ -27,7 +28,8 @@ module.exports = {
     // 'plugin:vue/vue3-strongly-recommended', // Priority B: Strongly Recommended (Improving Readability)
     'plugin:vue/vue3-recommended', // Priority C: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)
 
-    'standard'
+    'plugin:@typescript-eslint/recommended',
+    'standard',
     
   ],
 
@@ -35,7 +37,7 @@ module.exports = {
     // https://eslint.vuejs.org/user-guide/#why-doesn-t-it-work-on-vue-files
     // required to lint *.vue files
     'vue',
-    
+    '@typescript-eslint',
   ],
 
   globals: {
