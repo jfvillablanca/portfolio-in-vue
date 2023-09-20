@@ -14,25 +14,20 @@
   <generic-panel>
     <div class="flex flex-col min-h-screen">
       <h1 id="about-panel" class="text-3xl md:text-5xl pb-5">About</h1>
-      <p class="mb-3 max-w-sm md:text-lg lg:max-w-md">
-        <span class="font-bold">The Perennial Learner: </span> I thrive on
-        tackling complex challenges, whether it's coding or jazz theory. A quick
-        study, I approach every endeavor with curiosity and a thirst for
-        knowledge.
-      </p>
-      <p class="mb-3 max-w-sm md:text-lg lg:max-w-md">
-        <span class="font-bold">From circuits to code: </span>Though my software
-        development journey is recent, my programming journey began early and
-        blossomed during my university days. With an electronics engineering
-        background, I've explored the rudiments of computing, from data
-        abstractions to physical circuitry.
-      </p>
-      <p class="mb-3 max-w-sm md:text-lg lg:max-w-md">
-        <span class="font-bold">Off-Duty Grooves: </span>When not immersed on a
-        new project or tinkering with Nix, you'll find me self-teaching guitar
-        and bass, diving into music theory, and transcribing jazz solos or
-        comping to bossa rhythms.
-      </p>
+      <ul class="grid">
+        <li
+          v-for="({ header, paragraph, className, aos }, index) in aboutCards"
+          :key="header"
+          :class="{ 'place-self-end': (index + 1) % 2 === 0 }"
+        >
+          <AboutCard
+            :header="header"
+            :paragraph="paragraph"
+            :class="className"
+            :aos="aos"
+          />
+        </li>
+      </ul>
     </div>
   </generic-panel>
 
@@ -64,11 +59,13 @@ import { useHead } from '#app';
 import { definePageMeta } from '#imports';
 import GenericPanel from '@/components/commons/GenericPanel.vue';
 import quizzical1 from '../assets/project-screenshots/quizzical/quizzical-1.png';
+import AboutCard from '@/components/commons/AboutCard.vue';
 import ProjectCard from '@/components/commons/ProjectCard.vue';
 
 export default {
   components: {
     GenericPanel,
+    AboutCard,
     ProjectCard,
   },
   setup() {
@@ -80,7 +77,29 @@ export default {
       title: "jmfv's portfolio",
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     });
-
+    const aboutCards = [
+      {
+        header: 'The Perennial Learner',
+        paragraph:
+          "I thrive on tackling complex challenges, whether it's coding or jazz theory. A quick study, I approach every endeavor with curiosity and a thirst for knowledge.",
+        className: 'bg-lime-300',
+        aos: 'fade-up',
+      },
+      {
+        header: 'From circuits to code',
+        paragraph:
+          "Though my software development journey is recent, my programming journey began early and blossomed during my university days. With an electronics engineering background, I've explored the rudiments of computing, from data abstractions to physical circuitry.",
+        className: 'bg-secondary',
+        aos: 'fade-down',
+      },
+      {
+        header: 'Off-Duty Grooves',
+        paragraph:
+          "When not immersed on a new project or tinkering with Nix, you'll find me self-teaching guitar and bass, diving into music theory, and transcribing jazz solos or comping to bossa rhythms.",
+        className: 'bg-accent',
+        aos: 'fade-up',
+      },
+    ];
     const projects: Project[] = [
       {
         name: 'Bourne Task App',
@@ -107,7 +126,7 @@ export default {
         images: [quizzical1],
       },
     ];
-    return { projects };
+    return { aboutCards, projects };
   },
 };
 </script>
