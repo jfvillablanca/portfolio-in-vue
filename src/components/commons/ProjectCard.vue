@@ -8,6 +8,7 @@ const project = computed(() => {
 });
 const { name, description, technologies, githubRepo, images } = project.value;
 const isProjectInfoShown = ref(false);
+const isScrolling = ref(false);
 
 function showProjectInfo() {
   isProjectInfoShown.value = true;
@@ -18,7 +19,18 @@ function hideProjectInfo() {
 }
 
 function toggleProjectInfo() {
-  isProjectInfoShown.value = !isProjectInfoShown.value;
+  if (!isScrolling.value) {
+    isProjectInfoShown.value = !isProjectInfoShown.value;
+  }
+  isScrolling.value = false;
+}
+
+function handleTouchStart() {
+  isScrolling.value = false;
+}
+
+function handleTouchMove() {
+  isScrolling.value = true;
 }
 </script>
 
@@ -48,12 +60,14 @@ function toggleProjectInfo() {
       :class="{ 'top-0 bg-neutral bg-opacity-95': isProjectInfoShown }"
       @mouseenter="showProjectInfo"
       @mouseleave="hideProjectInfo"
-      @touchstart="toggleProjectInfo"
+      @touchend="toggleProjectInfo"
+      @touchmove="handleTouchMove"
+      @touchstart="handleTouchStart"
     >
-      <div class="prose">
+      <div class="prose max-h-full overflow-y-auto">
         <h2
-          class="text-2xl py-11"
-          :class="[isProjectInfoShown ? 'py-6' : 'py-11']"
+          class="text-2xl md:text-3xl"
+          :class="[isProjectInfoShown ? 'my-4' : 'my-6']"
         >
           {{ name }}
         </h2>
@@ -64,7 +78,7 @@ function toggleProjectInfo() {
             { 'h-full scale-y-100': isProjectInfoShown },
           ]"
         >
-          <p class="text-md">
+          <p class="text-lg">
             {{ description }}
           </p>
           <a :href="githubRepo" class="link">Source Code</a>
