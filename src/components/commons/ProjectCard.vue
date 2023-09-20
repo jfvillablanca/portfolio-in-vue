@@ -44,8 +44,8 @@ function toggleProjectInfo() {
       </li>
     </ul>
     <div
-      class="absolute transition-all left-0 bottom-0 w-full bg-neutral bg-opacity-80 px-3 overflow-hidden"
-      :class="[{ 'top-0': isProjectInfoShown }]"
+      class="absolute transition left-0 bottom-0 w-full px-3 overflow-hidden bg-gradient-to-t from-gray-950"
+      :class="{ 'top-0 bg-neutral bg-opacity-95': isProjectInfoShown }"
       @mouseenter="showProjectInfo"
       @mouseleave="hideProjectInfo"
       @touchstart="toggleProjectInfo"
