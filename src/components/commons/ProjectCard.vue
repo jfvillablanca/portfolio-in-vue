@@ -50,26 +50,34 @@ function toggleProjectInfo() {
       @mouseleave="hideProjectInfo"
       @touchstart="toggleProjectInfo"
     >
-      <h2 class="text-2xl py-6">
-        {{ name }}
-      </h2>
-      <div
-        class="transition"
-        :class="['h-0 scale-y-0', { 'h-full scale-y-100': isProjectInfoShown }]"
-      >
-        <p class="text-md">
-          {{ description }}
-        </p>
-        <a :href="githubRepo" class="link">Source Code</a>
-        <ul class="card-actions justify-end">
-          <li
-            v-for="tech in technologies"
-            :key="tech"
-            class="badge badge-outline p-3 text-lg"
-          >
-            {{ tech }}
-          </li>
-        </ul>
+      <div class="prose">
+        <h2
+          class="text-2xl py-11"
+          :class="[isProjectInfoShown ? 'py-6' : 'py-11']"
+        >
+          {{ name }}
+        </h2>
+        <div
+          class="transition"
+          :class="[
+            'h-0 scale-y-0',
+            { 'h-full scale-y-100': isProjectInfoShown },
+          ]"
+        >
+          <p class="text-md">
+            {{ description }}
+          </p>
+          <a :href="githubRepo" class="link">Source Code</a>
+          <ul class="card-actions justify-end">
+            <li
+              v-for="tech in technologies"
+              :key="tech"
+              class="badge badge-outline p-3 text-lg"
+            >
+              {{ tech }}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </li>
