@@ -1,11 +1,20 @@
 <template>
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content text-center">
-      <div class="max-w-xl md:max-w-3xl">
-        <h1 data-aos="fade-down" class="text-4xl md:text-7xl font-bold mb-6">
+      <div class="prose max-w-xl md:max-w-3xl">
+        <h1
+          data-aos="fade-down"
+          class="text-4xl font-bold mb-6 md:text-6xl lg:text-7xl"
+        >
           Hello, I am Jann Marc!
         </h1>
-        <p data-aos="fade-down" data-aos-delay="300" class="md:text-lg mb-6">
+        <p
+          data-aos="fade-up"
+          data-aos-delay="500"
+          class="mb-6 md:text-2xl lg:text-4xl"
+        >
+          I turn ideas into lines of code one
+          <span class="font-mono">git commit</span> at a time
         </p>
       </div>
     </div>
@@ -13,7 +22,9 @@
 
   <generic-panel>
     <div class="flex flex-col min-h-screen">
-      <h1 id="about-panel" class="text-3xl md:text-5xl pb-5">About</h1>
+      <div class="prose">
+        <h1 id="about-panel" class="text-3xl md:text-5xl pb-5">About</h1>
+      </div>
       <ul class="grid">
         <li
           v-for="({ header, paragraph, className, aos }, index) in aboutCards"
@@ -33,8 +44,12 @@
 
   <generic-panel>
     <div class="flex flex-col min-h-screen -scroll-mt-3">
-      <h1 id="projects-panel" class="text-3xl md:text-5xl pb-5">Projects</h1>
-      <ul class="flex flex-col place-items-center">
+      <div class="prose">
+        <h1 id="projects-panel" class="text-3xl md:text-5xl pb-5">Projects</h1>
+      </div>
+      <ul
+        class="grid auto-rows-min gap-7 xl:grid-cols-2 xl:gap-11 place-items-center"
+      >
         <ProjectCard
           v-for="project in projects"
           :key="project.name"
@@ -46,9 +61,13 @@
 
   <generic-panel>
     <div class="flex flex-col min-h-screen">
-      <h1 id="contact-panel" class="text-3xl md:text-5xl pb-5">Contact</h1>
+      <div class="prose">
+        <h1 id="contact-panel" class="text-3xl md:text-5xl pb-5">Contact</h1>
+      </div>
       <p class="md:text-lg">
+        Feel free to reach out if you want to collab or simply have a chat
       </p>
+      <h3>jmfv.dev@gmail.com</h3>
     </div>
   </generic-panel>
 </template>
@@ -124,7 +143,7 @@ export default {
         name: 'Converz Real Time Chat App',
         description:
           "Real-time chat full-stack application, replicating Discord's chat room functionality, by implementing a monorepo full-stack solution. This involved using vanilla Express and the Socket.IO library to enable seamless and bidirectional real-time communication channels",
-        technologies: ['React'],
+        technologies: ['React', 'Socket.IO'],
         githubRepo: 'https://github.com/jfvillablanca/converz-rtc',
         images: [converz1, converzJoin],
       },
