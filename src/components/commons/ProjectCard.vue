@@ -23,12 +23,7 @@ function toggleProjectInfo() {
 </script>
 
 <template>
-  <li
-    class="bg-neutral max-w-md relative"
-    @mouseenter="showProjectInfo"
-    @mouseleave="hideProjectInfo"
-    @touchstart="toggleProjectInfo"
-  >
+  <li class="bg-neutral max-w-2xl relative h-full">
     <ul class="carousel carousel-center">
       <li
         v-for="image in images"
@@ -51,6 +46,9 @@ function toggleProjectInfo() {
     <div
       class="absolute transition-all left-0 bottom-0 w-full bg-neutral bg-opacity-80 px-3 overflow-hidden"
       :class="[{ 'top-0': isProjectInfoShown }]"
+      @mouseenter="showProjectInfo"
+      @mouseleave="hideProjectInfo"
+      @touchstart="toggleProjectInfo"
     >
       <h2 class="text-2xl py-6">
         {{ name }}
