@@ -29,14 +29,25 @@ function toggleProjectInfo() {
     @mouseleave="hideProjectInfo"
     @touchstart="toggleProjectInfo"
   >
-    <figure
-      v-for="image in images"
-      :key="image"
-      class="relative"
-      :class="[{ 'blur-[2px]': isProjectInfoShown }]"
-    >
-      <img :src="image" />
-    </figure>
+    <ul class="carousel carousel-center">
+      <li
+        v-for="image in images"
+        :key="image"
+        class="relative carousel-item w-full"
+      >
+        <!-- Blurred background -->
+        <figure class="absolute h-full inset-0 overflow-hidden">
+          <img :src="image" class="h-full object-cover blur-lg brightness-50" />
+        </figure>
+        <!-- Centered image -->
+        <figure
+          class="flex items-center justify-center relative"
+          :class="[{ 'blur-[2px]': isProjectInfoShown }]"
+        >
+          <img :src="image" class="object-contain max-h-full max-w-full" />
+        </figure>
+      </li>
+    </ul>
     <div
       class="absolute transition-all left-0 bottom-0 w-full bg-neutral bg-opacity-80 px-3 overflow-hidden"
       :class="[{ 'top-0': isProjectInfoShown }]"
