@@ -58,9 +58,20 @@ import { Project } from '@/types';
 import { useHead } from '#app';
 import { definePageMeta } from '#imports';
 import GenericPanel from '@/components/commons/GenericPanel.vue';
-import quizzical1 from '../assets/project-screenshots/quizzical/quizzical-1.png';
 import AboutCard from '@/components/commons/AboutCard.vue';
 import ProjectCard from '@/components/commons/ProjectCard.vue';
+
+import quizzical1 from '@/assets/project-screenshots/quizzical/quizzical-1.png';
+import quizzical2 from '@/assets/project-screenshots/quizzical/quizzical-2.png';
+import quizzicalTheme from '@/assets/project-screenshots/quizzical/quizzical-theme.gif';
+import quizzicalAnswers from '@/assets/project-screenshots/quizzical/quizzical-answers.gif';
+
+import converz1 from '@/assets/project-screenshots/converz/converz-1.png';
+import converzJoin from '@/assets/project-screenshots/converz/converz-join.gif';
+
+import bourne1 from '@/assets/project-screenshots/bourne/bourne1.png';
+import bourne2 from '@/assets/project-screenshots/bourne/bourne2.png';
+import bourneAuth from '@/assets/project-screenshots/bourne/bourne-auth.gif';
 
 export default {
   components: {
@@ -107,7 +118,7 @@ export default {
           'Full-stack task management app inspired by Trello, featuring a robust NestJS/Express CRUD API backend, complemented by a Vite/React frontend. The frontend application efficiently manages its state asynchronously using Tanstack Query and the backend authenticates users with the PassportJS middleware',
         technologies: ['React'],
         githubRepo: 'https://github.com/jfvillablanca/bourne-task-app',
-        images: [quizzical1],
+        images: [bourne1, bourneAuth, bourne2],
       },
       {
         name: 'Converz Real Time Chat App',
@@ -115,7 +126,7 @@ export default {
           "Real-time chat full-stack application, replicating Discord's chat room functionality, by implementing a monorepo full-stack solution. This involved using vanilla Express and the Socket.IO library to enable seamless and bidirectional real-time communication channels",
         technologies: ['React'],
         githubRepo: 'https://github.com/jfvillablanca/converz-rtc',
-        images: [quizzical1],
+        images: [converz1, converzJoin],
       },
       {
         name: "Let's get quizzical",
@@ -123,7 +134,7 @@ export default {
           'A quiz app based on React that retrieves quiz items from the Open Trivia Database through Fetch API calls.',
         technologies: ['React'],
         githubRepo: 'https://github.com/jfvillablanca/lets-get-quizzical',
-        images: [quizzical1],
+        images: [quizzical1, quizzicalTheme, quizzical2, quizzicalAnswers],
       },
     ];
     return { aboutCards, projects };
