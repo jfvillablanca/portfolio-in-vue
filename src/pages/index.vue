@@ -119,14 +119,14 @@ export default {
         header: 'From circuits to code',
         paragraph:
           "Though my software development journey is recent, my programming journey began early and blossomed during my university days. With an electronics engineering background, I've explored the rudiments of computing, from data abstractions to physical circuitry.",
-        className: 'bg-secondary',
+        className: 'bg-amber-300',
         aos: 'fade-down',
       },
       {
         header: 'Off-Duty Grooves',
         paragraph:
-          "When not immersed on a new project or tinkering with Nix, you'll find me self-teaching guitar and bass, diving into music theory, and transcribing jazz solos or comping to bossa rhythms.",
-        className: 'bg-accent',
+          "When not immersed on coding a new project or tinkering with my dotfiles (I use NixOS, btw), you'll find me self-teaching guitar and bass, diving into music theory, and transcribing jazz solos or comping to bossa rhythms.",
+        className: 'bg-cyan-300',
         aos: 'fade-up',
       },
     ];

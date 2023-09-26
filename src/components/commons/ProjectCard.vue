@@ -35,7 +35,7 @@ function handleTouchMove() {
 </script>
 
 <template>
-  <li class="bg-neutral max-w-2xl relative h-full">
+  <li class="bg-neutral max-w-2xl relative rounded-xl overflow-hidden">
     <ul class="carousel carousel-center">
       <li
         v-for="image in images"
@@ -57,7 +57,7 @@ function handleTouchMove() {
     </ul>
     <div
       class="absolute transition left-0 bottom-0 w-full px-3 overflow-hidden bg-gradient-to-t from-gray-950"
-      :class="{ 'top-0 bg-neutral bg-opacity-95': isProjectInfoShown }"
+      :class="{ 'top-0 bg-neutral bg-opacity-75': isProjectInfoShown }"
       @mouseenter="showProjectInfo"
       @mouseleave="hideProjectInfo"
       @touchend="toggleProjectInfo"
