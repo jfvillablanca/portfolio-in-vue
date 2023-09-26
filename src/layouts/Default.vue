@@ -8,21 +8,21 @@
         <div class="">
           <a
             class="btn btn-ghost md:text-lg"
-            @click="scrollToSection('about-panel')"
+            @click="smoothScrollToAnchor('about-panel')"
             >About</a
           >
         </div>
         <div class="">
           <a
             class="btn btn-ghost md:text-lg"
-            @click="scrollToSection('projects-panel')"
+            @click="smoothScrollToAnchor('projects-panel')"
             >Projects</a
           >
         </div>
         <div class="">
           <a
             class="btn btn-ghost md:text-lg"
-            @click="scrollToSection('contact-panel')"
+            @click="smoothScrollToAnchor('contact-panel')"
             >Contact</a
           >
         </div>
@@ -52,6 +52,7 @@
 
 <script>
 import { ref, watch, onMounted } from 'vue';
+import { smoothScrollToAnchor } from '@/lib';
 const THEMES = [
   'light',
   'dark',
@@ -98,16 +99,7 @@ export default {
     };
   },
   methods: {
-    scrollToSection(sectionId) {
-      const element = document.getElementById(sectionId);
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.scrollY - element.offsetHeight - 15;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-    },
+    smoothScrollToAnchor,
     backToTop() {
       window.scrollTo({
         top: 0,
