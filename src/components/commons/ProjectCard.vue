@@ -39,6 +39,7 @@ function handleTouchMove() {
     <ul class="carousel carousel-center">
       <li
         v-for="image in images"
+        :id="image"
         :key="image"
         class="relative carousel-item w-full"
       >
@@ -92,4 +93,13 @@ function handleTouchMove() {
       </div>
     </div>
   </li>
+  <div class="flex justify-center w-full py-2 gap-2">
+    <a
+      v-for="(image, index) in images"
+      :key="image"
+      :href="`#${image}`"
+      class="btn btn-xs"
+      >{{ index + 1 }}</a
+    >
+  </div>
 </template>
