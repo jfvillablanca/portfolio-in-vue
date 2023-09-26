@@ -1,5 +1,5 @@
 <template>
-  <div class="hero min-h-screen bg-base-200">
+  <div class="relative hero min-h-screen bg-base-200">
     <div class="hero-content text-center">
       <div class="prose max-w-xl md:max-w-3xl">
         <h1
@@ -18,6 +18,7 @@
         </p>
       </div>
     </div>
+    <SideButtons />
   </div>
 
   <generic-panel>
@@ -76,9 +77,11 @@
 import { Project } from '@/types';
 import { useHead } from '#app';
 import { definePageMeta } from '#imports';
+
 import GenericPanel from '@/components/commons/GenericPanel.vue';
 import AboutCard from '@/components/commons/AboutCard.vue';
 import ProjectCard from '@/components/commons/ProjectCard.vue';
+import SideButtons from '@/components/commons/SideButtons.vue';
 
 import quizzical1 from '@/assets/project-screenshots/quizzical/quizzical-1.png';
 import quizzical2 from '@/assets/project-screenshots/quizzical/quizzical-2.png';
@@ -97,6 +100,7 @@ export default {
     GenericPanel,
     AboutCard,
     ProjectCard,
+    SideButtons,
   },
   setup() {
     definePageMeta({
