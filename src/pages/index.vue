@@ -59,17 +59,17 @@
     </div>
   </generic-panel>
 
-  <generic-panel>
-    <div class="flex flex-col min-h-screen">
-      <div class="prose">
-        <h1 id="contact-panel" class="text-3xl md:text-5xl pb-5">Contact</h1>
-      </div>
-      <p class="md:text-lg">
-        Feel free to reach out if you want to collab or simply have a chat
-      </p>
-      <h3>jmfv.dev@gmail.com</h3>
-    </div>
-  </generic-panel>
+  <!-- <generic-panel> -->
+  <!--   <div class="flex flex-col min-h-screen"> -->
+  <!--     <div class="prose"> -->
+  <!--       <h1 id="contact-panel" class="text-3xl md:text-5xl pb-5">Contact</h1> -->
+  <!--       <p class="text-xl md:text-2xl"> -->
+  <!--         Feel free to reach out if you want to collab or just to say hi 👋 -->
+  <!--       </p> -->
+  <!--       <h3 class="text-2xl md:text-4xl">jmfv.dev@gmail.com</h3> -->
+  <!--     </div> -->
+  <!--   </div> -->
+  <!-- </generic-panel> -->
 </template>
 
 <script lang="ts">

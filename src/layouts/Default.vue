@@ -19,13 +19,13 @@
             >Projects</a
           >
         </div>
-        <div class="">
-          <a
-            class="btn btn-ghost md:text-lg"
-            @click="smoothScrollToAnchor('contact-panel')"
-            >Contact</a
-          >
-        </div>
+        <!-- <div class=""> -->
+        <!--   <a -->
+        <!--     class="btn btn-ghost md:text-lg" -->
+        <!--     @click="smoothScrollToAnchor('contact-panel')" -->
+        <!--     >Contact</a -->
+        <!--   > -->
+        <!-- </div> -->
       </div>
     </div>
     <slot />
