@@ -1,6 +1,6 @@
 <template>
   <div :data-theme="theme">
-    <div class="navbar fixed bg-base-300 z-40 shadow-sm">
+    <div class="navbar fixed bg-base-100 z-40 shadow-sm">
       <div class="navbar-start">
         <a class="btn btn-ghost md:text-xl" @click="backToTop()">Home</a>
       </div>
@@ -51,8 +51,9 @@
 </template>
 
 <script>
-import { ref, watch, onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import { smoothScrollToAnchor } from '@/lib';
+
 const THEMES = [
   'light',
   'dark',
@@ -87,11 +88,8 @@ const THEMES = [
 export default {
   setup() {
     const theme = ref(null);
-    watch(theme, (value = 'synthwave') => {
-      localStorage.setItem('daisyui-theme', value);
-    });
     onMounted(() => {
-      theme.value = localStorage.getItem('daisyui-theme') || 'dark';
+      theme.value = 'luxury';
     });
     return {
       theme,
