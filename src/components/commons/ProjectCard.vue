@@ -64,21 +64,18 @@ function handleTouchMove() {
       @touchmove="handleTouchMove"
       @touchstart="handleTouchStart"
     >
-      <div class="prose max-h-full overflow-y-auto">
+      <div
+        class="prose max-h-full overflow-y-auto transition"
+        :class="[isProjectInfoShown ? 'translate-y-0' : 'translate-y-3/4']"
+      >
         <h2
           class="text-2xl md:text-3xl"
-          :class="[isProjectInfoShown ? 'my-4' : 'my-6']"
+          :class="[isProjectInfoShown ? 'my-4' : 'my-0']"
         >
           {{ name }}
         </h2>
-        <div
-          class="transition"
-          :class="[
-            'h-0 scale-y-0',
-            { 'h-full scale-y-100': isProjectInfoShown },
-          ]"
-        >
-          <p class="text-lg">
+        <div :class="[!isProjectInfoShown && 'opacity-80']">
+          <p class="text-lg my-0">
             {{ description }}
           </p>
           <a :href="githubRepo" class="link">Source Code</a>
