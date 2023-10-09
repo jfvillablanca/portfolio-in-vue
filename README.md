@@ -2,6 +2,7 @@
 <p style="text-align: center">
 This is the repo for my personal website jump-started using <span><a href='https://github.com/OSSPhilippines/nuxtwind-daisy'>Nuxtwind Daisy starter template</a>.
 </p>
+<i>⚠️ This portfolio website is in active development ⚠️</i>
 
 ## Preview
 
